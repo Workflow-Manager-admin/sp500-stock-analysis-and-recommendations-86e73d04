@@ -1,0 +1,76 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.modal-content {
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  padding: 2rem;
+  min-width: 320px;
+  max-width: 460px;
+  width: 92vw;
+  color: var(--text-primary);
+  position: relative;
+  animation: fadeInModal .24s;
+}
+@keyframes fadeInModal {
+  from { transform: translateY(40px) scale(0.96); opacity: 0.65; }
+  to   { transform: none; opacity: 1; }
+}
+.modal-close {
+  position: absolute;
+  top: 11px; right: 11px;
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color .15s;
+}
+.modal-close:hover { color: var(--primary, #1976d2); }
+.modal-section {
+  margin-bottom: 1.2rem;
+}
+.rec-badge {
+  display: inline-block;
+  padding: .16em .75em;
+  border-radius: 6px;
+  margin-left: 4px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+}
+.rec-buy { background: #c8e6c9; color: #1b5e20;}
+.rec-hold { background: #fff9c4; color: #827700;}
+.rec-sell { background: #ffcdd2; color: #b71c1c;}
+.modal-score { margin-left: .9rem; color: var(--text-secondary); font-weight: 500;}
+.indicator-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+  margin-top: 0.4em;
+}
+.indicator-table th, .indicator-table td {
+  border: 1px solid var(--border-color,#e0e0e0);
+  padding: .5em .7em;
+  text-align: left;
+  font-size: .97em;
+}
+.indicator-table th {
+  background: var(--bg-secondary, #f3f5f7);
+  font-weight: 600;
+}
+.modal-mutedsmall {
+  color: #999;
+  font-size: .92em;
+}
+@media (max-width: 480px) {
+  .modal-content {padding: 1rem 5vw;}
+  .indicator-table th, .indicator-table td {font-size: .92em; padding: .2em;}
+}
