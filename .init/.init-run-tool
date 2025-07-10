@@ -1,0 +1,4 @@
+{
+    "command": "PORT=<port> HOST=<host> BROWSER=none npm start",
+    "working_directory": "/home/kavia/workspace/code-generation/sp500-stock-analysis-and-recommendations-86e73d04/sp500_stock_evaluator_frontend"
+}
